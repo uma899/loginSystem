@@ -72,6 +72,7 @@ function handleSubmit(){
             localStorage.setItem("id", res.statusText)
             
             console.log("response",res)
+            console.log("responsetxt",res.statusText)
             alert(res.statusText);
             //while(localStorage.getItem("id")){
             window.location.replace('/welcome');
