@@ -72,7 +72,9 @@ function handleSubmit(){
             localStorage.setItem("id", res.statusText)
             alert(res.statusText);
             console.log("response",res)
+            while(localStorage.getItem("id")){
             window.location.replace('/welcome');
+            }
             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
