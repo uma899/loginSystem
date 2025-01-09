@@ -36,7 +36,7 @@ function Welcome() {
             
         </div>
         <div className="welcome">
-            <h1>Welcome {userData.name}!</h1>
+            <h1>Welcome Mr {userData.name}!</h1>
             <h2>Your current details:</h2>
             <h3>Phone: {userData.phone}</h3>
             <h3>Password: {userData.password}</h3>
