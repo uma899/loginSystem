@@ -66,6 +66,7 @@ function handleSubmit(){
       body: JSON.stringify(user),
     }).then(
       (res) => {
+        console.log("responsetxt",res.statusText)
         let invalid = document.getElementById('invalid');
         switch(res.status){
           case 200:
@@ -80,6 +81,7 @@ function handleSubmit(){
             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
+            console.log("responsetxt",res.statusText)
             //alert('Invalid credentials')
             console.log(res)
             break;
