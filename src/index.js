@@ -13,7 +13,7 @@ export default function Index() {
 return (
 <BrowserRouter>
     <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Login />} />
         <Route path="/*" element={<Notfound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
