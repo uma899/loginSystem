@@ -20,6 +20,7 @@ function Welcome() {
     return (
       <>
         <h2>Loading...</h2>
+        <a href="/login">Login again</a>
       </>
     );
   }
