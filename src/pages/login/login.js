@@ -58,7 +58,7 @@ function handleSubmit(){
       password: document.getElementById('password').value
     };
 
-    console.log(user)
+    console.log("user",user)
 
     fetch( API + 'users/verify', {
       method: "POST",
