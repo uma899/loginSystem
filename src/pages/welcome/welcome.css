@@ -1,0 +1,15 @@
+.header{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+svg{
+    fill: black;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
