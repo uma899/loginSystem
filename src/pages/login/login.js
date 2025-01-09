@@ -70,7 +70,7 @@ function handleSubmit(){
         switch(res.status){
           case 200:
             localStorage.setItem("id", res.statusText)
-            //alert(res.id);
+            alert(res.statusText);
             //console.log(res.statusText)
             window.location.replace('/welcome');
             break;
