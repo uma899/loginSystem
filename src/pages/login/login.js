@@ -70,11 +70,12 @@ function handleSubmit(){
         switch(res.status){
           case 200:
             localStorage.setItem("id", res.statusText)
-            alert(res.statusText);
+            
             console.log("response",res)
-            while(localStorage.getItem("id")){
+            alert(res.statusText);
+            //while(localStorage.getItem("id")){
             window.location.replace('/welcome');
-            }
+            //}
             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
