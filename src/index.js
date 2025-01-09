@@ -17,7 +17,7 @@ return (
         <Route path="/*" element={<Notfound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {userId ? (<Route path="/welcome" element={<Welcome />} />): null}
+        <Route path="/welcome" element={<Welcome />} />
 
 
 
