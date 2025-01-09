@@ -71,7 +71,7 @@ function handleSubmit(){
           case 200:
             localStorage.setItem("id", res.statusText)
             alert(res.statusText);
-            console.log(res)
+            console.log("response",res)
             window.location.replace('/welcome');
             break;
           case 401:
