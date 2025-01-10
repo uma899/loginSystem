@@ -1,1 +1,1 @@
-export const API = "https://grocery-shtz.onrender.com/"
+export const API = "http://localhost:5000/"

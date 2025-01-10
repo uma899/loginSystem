@@ -6,7 +6,7 @@ import "./welcome.css"
 
 function Welcome() {
   const userId = localStorage.getItem("id");
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState(null);
 
   useEffect(() => {
     fetch(API + "users/" + userId)
@@ -36,11 +36,10 @@ function Welcome() {
             
         </div>
         <div className="welcome">
-            <h1>Welcome_ {JSON.stringify(userData.name)}!</h1>
+            <h1>Welcome {userData.name}!</h1>
             <h2>Your current details:</h2>
-            <h3>Phone: {JSON.stringify(userData.phone)}</h3>
-            <h3>Password: {JSON.stringify(userData.password)}</h3>
-
+            <h3>Phone: {userData.phone}</h3>
+            <h3>Password: {userData.password}</h3>
         </div>
     </div>
   );

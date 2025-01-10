@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", serif;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.main-nav{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+.icon-nav svg{
+    fill: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.logo-nav{
+    font-family: "Pangolin";
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
+
+.login-nav{
+    text-align: right;
+}
+
+.login-nav a{
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.login-nav a:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.menu-nav{
+    background-color: rgb(255, 255, 255);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: fit-content;
+    box-shadow: 0 0 10px black;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    content-visibility: hidden;
+    
+}
+
+@keyframes menuOpen {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes menuClose {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.menu-nav svg{
+    fill: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+.menu-opt-nav{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-opt-nav a:hover{
+    background-color: black;
+    color: white;
+}
+
+.menu-opt-nav a:nth-child(5){
+    margin-top: 50px;
+}
+
+.menu-opt-nav a{
+    list-style-type: none;
+    padding: 10px;
+    color: black;
+    transition: 100ms;
+    padding-right: 150px;
+    font-size: 18px;
+}
+
+.menu-opt-nav li a{
+    color: black;
+}
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    padding-top: 15px;
+}
+
+.bottom-nav a{
+    padding: 25px;
+    color: white;
+}

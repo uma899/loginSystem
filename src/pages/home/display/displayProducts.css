@@ -1,0 +1,61 @@
+.main-d{
+    margin-top: 70px;
+}
+
+.grid-d{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-d{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    align-items: center;
+    max-height: 350px;
+}
+
+.card-d img{
+    height: 125px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.btn-a{
+    background: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.btn-a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 3px solid black;
+    padding: 8px;
+    font-weight: 600;
+}
+.card-d button a{
+    color: white;
+}
+
+.card-d button a:hover{
+    color: black;
+}
+
+/* .text-d{
+    margin-bottom: 45px;
+}
+
+.btn-a{
+    position:absolute;
+    bottom: 8px;
+} */

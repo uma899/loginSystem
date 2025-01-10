@@ -1,0 +1,59 @@
+.main-add{
+    display: grid;
+    place-items: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+}
+
+.container-add{
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-add{
+    width: fit-content;
+    background-color: rgb(71, 77, 82);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(211, 212, 213);
+    border: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+
+#bt-add::file-selector-button{
+    width: fit-content;
+    background-color: rgb(71, 77, 82);
+    padding: 5px;
+    border-radius: 8px;
+    color: rgb(211, 212, 213);
+    border: none;
+    font-weight: 400;
+}
+
+#btn-add:hover{
+    background-color: rgb(104, 112, 119);
+}
+
+.input-box-add{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+
+.input-box-add:focus, textarea-add:focus{
+    border: 1px solid rgb(79, 78, 78);
+    outline: none;
+}
+
+.preview-add{
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 80px;
+    width: 120px;
+    overflow: hidden;
+    display: none;
+    object-fit: cover;
+}

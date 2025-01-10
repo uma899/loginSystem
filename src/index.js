@@ -7,19 +7,25 @@ import Login from './pages/login/login';
 import Register from './pages/register/register';
 import Notfound from './pages/notfound';
 import Welcome from './pages/welcome/welcome';
+import Home from './pages/home/home';
+import Addproduct from './pages/Addproducts/addproduct';
+import ViewDetails from './pages/home/details/viewDetails';
+import Cart from './pages/cart/cart';
 
 export default function Index() {
     const userId = localStorage.getItem("id");
 return (
 <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/*" element={<Notfound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/welcome" element={<Welcome />} />
-
-
+        <Route path="/addproduct" element={<Addproduct />} />
+        <Route path="/product/:id" element={<ViewDetails
+         />} />
+         <Route path="/cart" element={<Cart />} />
 
     </Routes>
 </BrowserRouter>

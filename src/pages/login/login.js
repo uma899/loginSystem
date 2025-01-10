@@ -58,7 +58,7 @@ function handleSubmit(){
       password: document.getElementById('password').value
     };
 
-    console.log("user",user)
+    console.log(user)
 
     fetch( API + 'users/verify', {
       method: "POST",
@@ -66,22 +66,16 @@ function handleSubmit(){
       body: JSON.stringify(user),
     }).then(
       (res) => {
-        console.log("responsetxt",res.statusText)
         let invalid = document.getElementById('invalid');
         switch(res.status){
           case 200:
             localStorage.setItem("id", res.statusText)
-            
-            console.log("response",res)
-            console.log("responsetxt",res.statusText)
-            alert(res.statusText);
-            //while(localStorage.getItem("id")){
+            //alert(res.id);
+            //console.log(res.statusText)
             window.location.replace('/welcome');
-            //}
             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
-            console.log("responsetxt",res.statusText)
             //alert('Invalid credentials')
             console.log(res)
             break;
