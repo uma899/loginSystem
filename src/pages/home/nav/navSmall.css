@@ -70,9 +70,8 @@ a{
     position: fixed;
     top: 0;
     z-index: 3;
-    content-visibility: hidden;
-    animation-duration: 1000ms;
-    animation-name: menuOpen;
+    left: -100%;
+    transition: 100ms;
 }
 
 @keyframes menuOpen {
