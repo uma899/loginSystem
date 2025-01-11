@@ -62,20 +62,18 @@ function handleSubmit(){
 
     console.log(user)
 
-    fetch( API + 'users/verify', {
+    //async function fetching() {
+      fetch( API + 'users/verify', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     }).then(
       (res) => {
         let invalid = document.getElementById('invalid');
-        switch(res.status){
-          case 200:
-            localStorage.setItem("id", res.id)
-            alert("Successfully Logged in!", res.id);
-            //console.log(res.statusText)
-            window.location.replace('/');
-            break;
+        //switch(res.status){
+         // case 200:
+            return res.json()
+/*             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
             //alert('Invalid credentials')
@@ -87,9 +85,22 @@ function handleSubmit(){
             break;
           default:
             alert('Network error! Please try again after some time')
-        }
+        } */
       }
-    );
+    )
+    .then((d) => {
+      console.log(d);
+      localStorage.setItem("id", d.id);
+      window.location.reload();
+    })
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+      // Display an appropriate error message to the user
+      let invalid = document.getElementById('invalid');
+      invalid.innerHTML = 'An error occurred during login.'; 
+    });
+  //}
+  //fetching();
 
 }
 

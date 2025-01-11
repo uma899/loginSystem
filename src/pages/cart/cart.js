@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./cart.css";
-import GetData from "../../getdata/getdata";
+//import GetData from "../../getdata/getdata";
 import { API } from "../../contants";
 import NavSmall from "../home/nav/navSmall";
 
 function Cart() {
-  const [cartItems, setCartItems] = useState([]);
+  //const [cartItems, setCartItems] = useState([]);
+  const [bill, setBill] = useState(0);
   //let cartItems = [];
   let cart = JSON.parse(localStorage.getItem("cart"));
   console.log("cart", cart);
@@ -25,8 +26,8 @@ function Cart() {
       getitems(); */
 
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  //const [isLoading, setIsLoading] = useState(true);
+  //const [error, setError] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,10 +48,10 @@ function Cart() {
 
         const results = await Promise.all(promises);
         setData(results.filter((item) => item !== null)); // Filter out any failed fetches
-        setIsLoading(false);
+        //setIsLoading(false);
       } catch (err) {
-        setError(err);
-        setIsLoading(false);
+        //setError(err);
+        //setIsLoading(false);
       }
     };
 
@@ -83,6 +84,14 @@ function Cart() {
         </button>
       </div>
     ));
+
+    let amt = () => {
+      let total = 0;
+      data.forEach((el) => (
+      total = total + parseInt(el.price)
+    ));
+    return total
+    };
     return (
       <>
       <NavSmall />
@@ -90,6 +99,7 @@ function Cart() {
           <div className="grid-d">
           {cartDisplay}
           </div>
+          <div style={{display: "flex", gap: 10, justifyContent: "center"}}>
         <button
           className="btn-a"
           onClick={() => {
@@ -98,6 +108,20 @@ function Cart() {
         >
           Empty Cart
         </button>
+
+        <button
+          onClick={() => {setBill(1)}}
+          className="btn-a">
+          CheckOut
+        </button>
+        </div>
+
+        <div className="bill" style={{opacity: bill}}>
+          <h1>Your Bill</h1>
+          <h3>{amt()}</h3>
+          <button className="btn-a" onClick={() => {alert('Payment is currently Offline')}}>Pay</button>
+        </div>
+
         </div>
       </>
     );

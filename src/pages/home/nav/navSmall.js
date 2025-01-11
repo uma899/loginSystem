@@ -9,7 +9,7 @@ function NavSmall() {
       <div className="main-nav">
         <div
           onClick={() => {
-            setMenu(0);
+            setMenu("visible");
             console.log(menu);
           }}
           className="icon-nav"
@@ -28,26 +28,26 @@ function NavSmall() {
           <p>Electronics</p>
         </div>
         <div className="login-nav">
-          {!(localStorage.getItem("id")) ? (
+          {(localStorage.getItem("id") == null) ? (
             <a href="/login">Login</a>
           ) : (
-            <button className="logout-d" onClick={() => {
+            <a href="/"><button className="logout-d" onClick={() => {
                 localStorage.removeItem("id");
                 window.location.reload();
-            }}>Logout</button>
+            }}>Logout</button></a>
           )}
         </div>
       </div>
 
       <div
         id="menu-nav"
-        style={{ left: menu }}
+        style={{ contentVisibility: menu }}
         className="menu-nav"
       >
         <div
           id="close"
           onClick={() => {
-            setMenu("-100%");
+            setMenu("hidden");
           }}
         >
           <svg

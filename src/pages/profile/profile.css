@@ -1,0 +1,26 @@
+.main-pro{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-pro p{
+    font-weight: 500;
+    font-size: 3vw;
+}
+
+.btn-a{
+    width: fit-content;
+}
+
+.bill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 100ms;
+}

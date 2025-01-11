@@ -12,6 +12,9 @@ function Home() {
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
+
+  //console.log('ID:', (localStorage.getItem("id")).length)
+  console.log('I-D:', (localStorage.getItem("id")))
   if (products === null) {
     return (
       <>

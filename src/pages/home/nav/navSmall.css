@@ -70,8 +70,9 @@ a{
     position: fixed;
     top: 0;
     z-index: 3;
-    left: -100%;
-    transition: 500ms;
+    content-visibility: hidden;
+    animation-duration: 1000ms;
+    animation-name: menuOpen;
 }
 
 @keyframes menuOpen {
@@ -146,4 +147,15 @@ a{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+}
+
+.logout-d{
+    background: none;
+    border: none;
+    color: white;
+}
+
+.logout-d:hover{
+    background-color: white;
+    color: rgb(11, 11, 11);
 }
