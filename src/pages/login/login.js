@@ -91,7 +91,7 @@ function handleSubmit(){
     .then((d) => {
       console.log(d);
       localStorage.setItem("id", d.id);
-      window.location.reload();
+      window.location.replace("/");
     })
     .catch(error => {
       console.error('There has been a problem with your fetch operation:', error);
