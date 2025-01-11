@@ -9,7 +9,7 @@ function NavSmall() {
       <div className="main-nav">
         <div
           onClick={() => {
-            setMenu("visible");
+            setMenu(0);
             console.log(menu);
           }}
           className="icon-nav"
@@ -41,13 +41,13 @@ function NavSmall() {
 
       <div
         id="menu-nav"
-        style={{ contentVisibility: menu }}
+        style={{ left: menu }}
         className="menu-nav"
       >
         <div
           id="close"
           onClick={() => {
-            setMenu("hidden");
+            setMenu("-100%");
           }}
         >
           <svg
