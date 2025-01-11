@@ -34,7 +34,7 @@ a{
 .logo-nav{
     font-family: "Pangolin";
     font-weight: 700;
-    font-size: 45px;
+    font-size: 3vh;
     text-align: center;
     color: white;
 }
@@ -66,12 +66,13 @@ a{
     gap: 50px;
     width: fit-content;
     box-shadow: 0 0 10px black;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
     z-index: 3;
     content-visibility: hidden;
-    
+    animation-duration: 1000ms;
+    animation-name: menuOpen;
 }
 
 @keyframes menuOpen {
@@ -140,4 +141,10 @@ a{
 .bottom-nav a{
     padding: 25px;
     color: white;
+}
+
+.sign-d{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }

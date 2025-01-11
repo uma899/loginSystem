@@ -1,10 +1,12 @@
 import React from 'react'
 import { API } from '../../contants';
 import './register.css'
+import NavSmall from '../home/nav/navSmall';
 
 function Register() {
   return (
       <div>
+        <NavSmall />
         <div className="main">
           <h1>Register</h1>
           <div className="form">

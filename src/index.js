@@ -11,6 +11,8 @@ import Home from './pages/home/home';
 import Addproduct from './pages/Addproducts/addproduct';
 import ViewDetails from './pages/home/details/viewDetails';
 import Cart from './pages/cart/cart';
+import Admin from './pages/admin/admin';
+import Profile from './pages/profile/profile';
 
 export default function Index() {
     const userId = localStorage.getItem("id");
@@ -26,6 +28,8 @@ return (
         <Route path="/product/:id" element={<ViewDetails
          />} />
          <Route path="/cart" element={<Cart />} />
+         <Route path="/admin" element={<Admin />} />
+         <Route path="/profile" element={<Profile />} />
 
     </Routes>
 </BrowserRouter>

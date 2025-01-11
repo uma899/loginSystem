@@ -1,12 +1,14 @@
 import React from "react";
 import "./login.css";
 import { API } from "../../contants";
+import NavSmall from "../home/nav/navSmall";
 
 
 function Login() {
   console.log(localStorage.getItem('phone'))
   return (
     <div>
+      <NavSmall />
       <div className="main">
         <h1>Login</h1>
         <div className="form">
@@ -69,10 +71,10 @@ function handleSubmit(){
         let invalid = document.getElementById('invalid');
         switch(res.status){
           case 200:
-            localStorage.setItem("id", res.statusText)
-            //alert(res.id);
+            localStorage.setItem("id", res.id)
+            alert("Successfully Logged in!", res.id);
             //console.log(res.statusText)
-            window.location.replace('/welcome');
+            window.location.replace('/');
             break;
           case 401:
             invalid.innerHTML = 'Invalid credentials'
