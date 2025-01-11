@@ -71,7 +71,7 @@ a{
     top: 0;
     z-index: 3;
     left: -100%;
-    transition: 100ms;
+    transition: 500ms;
 }
 
 @keyframes menuOpen {
