@@ -7,7 +7,7 @@ function Addproduct() {
     <div>
         <div class="main-add">
 		<h1>Add Product</h1>
-		<form action="http://localhost:5000/products" method="post" enctype="multipart/form-data">
+		<form action= {API + 'products'} method="post" enctype="multipart/form-data">
 			<p>
 			  <label class = "input-heading-add" for="name">Item:</label>
 			  <br></br>
