@@ -32,7 +32,7 @@ function NavSmall() {
             <a href="/login">Login</a>
           ) : (
             <button className="logout-d" onClick={() => {
-                localStorage.setItem("id", null);
+                localStorage.setItem("id", JSON.stringify([]);
                 window.location.reload();
             }}>Logout</button>
           )}
