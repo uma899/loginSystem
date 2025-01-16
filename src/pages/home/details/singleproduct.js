@@ -8,8 +8,8 @@ function SingleProduct({product}) {
         <p>Name: {product.name}</p>
         <p>Price: {product.price}</p>
         <p>Price: {product.image}</p>
-    <img src= {API + 'images/' + product.image} > 
-        <p>Brand: <a>{product.unit}</a></p>
+    <img src= {API + 'images/' + product.image}></img> 
+        <p>Brand:{product.unit}</p>
     </div>
   )
 }
